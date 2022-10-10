@@ -53,7 +53,7 @@ namespace AvaloniaAplication
             set
             {
                 _monthlyPayment = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MonthlyPayment));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MonthlyPayment)));
             }
         }
 
@@ -64,14 +64,7 @@ namespace AvaloniaAplication
 
         private void Calculate()
         {
-            const int frequency = 12;
-            
-            double i = LoanAmount / (frequency * 100);
-            int n = LoanTerm * frequency;
-
-            double v = 1 / (1 + i);
-
-            MonthlyPayment = (i * LoanAmount) / (1 - Math.Pow(v, n));
+           
         }
     }
 }
