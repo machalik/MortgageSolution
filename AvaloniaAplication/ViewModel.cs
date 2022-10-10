@@ -60,7 +60,7 @@ namespace AvaloniaAplication
 
         public ViewModel()
         {
-            model = new Model { Id = 0, LoanAmount = 8000000.0, InterestRate = 6.0 };
+            model = new Model(8000000.0, 6.0, 30);
             calculationService = new CalculationService();
 
             Calculate();
