@@ -5,5 +5,16 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaAplication.MainWindow"
         Title="AvaloniaAplication">
-    Welcome to Avalonia!
+	<StackPanel>
+		<TextBlock Text="Loan Amount"/>
+		<NumericUpDown Value="{Binding LoanAmount}" Increment="200000.0"/>
+
+		<TextBlock Text="Interest Rate"/>
+		<NumericUpDown Value="{Binding InterestRate}"/>
+
+		<TextBlock Text="Loan Term"/>
+		<NumericUpDown Value="{Binding LoanTerm}"/>
+		
+		<TextBlock Text="{Binding MonthlyPayment, StringFormat='Monthly Payment: {0:C2}'}"/>
+	</StackPanel>
 </Window>
