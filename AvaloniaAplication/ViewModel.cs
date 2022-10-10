@@ -13,6 +13,7 @@ namespace AvaloniaAplication
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public Model model;
+        public CalculationService calculationService;
 
         public double LoanAmount
         {
@@ -60,11 +61,14 @@ namespace AvaloniaAplication
         public ViewModel()
         {
             model = new Model { Id = 0, LoanAmount = 8000000.0, InterestRate = 6.0 };
+            calculationService = new CalculationService();
+
+            Calculate();
         }
 
         private void Calculate()
         {
-           
+            MonthlyPayment = calculationService.MonthlyPayment(LoanAmount, InterestRate, LoanTerm);
         }
     }
 }
