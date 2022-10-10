@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.idea/.idea.MortgageSolution/.idea/indexLayout.xml
+.idea/.idea.MortgageSolution/.idea/projectSettingsUpdater.xml
+.idea/.idea.MortgageSolution/.idea/vcs.xml
+.idea/.idea.MortgageSolution/.idea/workspace.xml
